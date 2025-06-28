@@ -1,0 +1,2 @@
+Exam.campare
+Exam.Result

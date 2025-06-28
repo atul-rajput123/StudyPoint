@@ -1,0 +1,100 @@
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-image: url('BackGround.jpg');
+            text-align: center;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #007bff;
+            overflow: hidden;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-end;  /* Align navbar links to the right */
+            align-items: center;  /* Vertically center the navbar items */
+        }
+
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+
+        /* Centering the logo and welcome message */
+        .logo-container {
+            display: flex;
+            justify-content: center; /* Aligns the logo and message to the center */
+            align-items: center;  /* Vertically center */
+            gap: 20px; /* Space between logo and message */
+            margin-top: 30px; /* Reduced gap between navbar and content */
+        }
+
+        .logo-container img {
+            width: 120px; /* Logo size */
+            height: 120px; /* Logo size */
+            border-radius: 50%; /* Circular shape */
+        }
+
+        .welcome-message {
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+            background-color: rgba(0, 123, 255, 0.7);
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Table & Input Styles */
+        .sizetext1 {
+            background-color: yellow;
+            width: 460px;
+            height: 45px;
+            font-size: 25px;
+            text-shadow: 1px 1px 10px red;
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            background-color: #ff6347;
+            font-size: 20px;
+            width: 150px;
+            height: 45px;
+            border-radius: 0px 100px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #e5533d;
+            width: 160px;
+            height: 50px;
+        }
+
+        .table {
+            width: 480px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 30px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+        }
+
+        /* Center Content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }

@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Main Sidenav (left side) */
+.sidenav {
+    height: 100%;                  /* Full height */
+    width: 500px;                  /* Default width */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;        /* Dark background */
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: width 0.4s;        /* Smooth width change */
+}
+
+/* Links inside the sidenav */
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for sidenav links */
+.sidenav a:hover {
+    background-color: #575757;
+    color: #4CAF50;
+}
+
+/* Setting Button inside sidenav (bottom positioned) */
+.sidenav .setting {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.sidenav .setting:hover {
+    color: #4CAF50;
+}
+
+/* Right Side Menu (Settings) */
+.sideMenu {
+    height: 100%;                  /* Full height */
+    width: 0;                      /* Hidden by default */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #333;        /* Dark background */
+    overflow-y: auto;              /* Enable scrolling */
+    transition: width 0.4s ease;   /* Smooth sliding effect */
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* Close button inside the right side menu */
+.sideMenu .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Styling for range sliders */
+.sideMenu input[type="range"] {
+    width: 90%;                    /* Better layout */
+    margin: 10px 0;
+}
+
+/* Text elements inside the side menu */
+.sideMenu span,
+.sideMenu p {
+    color: white;
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+/* Labels for Light/Dark mode */
+.sideMenu label {
+    display: block;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+}
+
+/* Light and Dark Mode */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
