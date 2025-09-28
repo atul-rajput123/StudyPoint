@@ -6,7 +6,7 @@ public class GmailGenrete
     public boolean sendGmail(String sender,String sub,String text)
     {
         String username="atul4rajput2003@gmail.com";
-        String password="nxlc igpc zjih fpky";
+        String password="";
         boolean flag=false;
         //logic
         Properties properties=new Properties();
