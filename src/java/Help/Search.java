@@ -37,12 +37,12 @@ public class Search extends HttpServlet {
                            "&key=" + API_KEY + "&cx=" + CX;
 
         try {
-            // Connect to Google Custom Search API
+            
             URL url = new URL(urlString);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             
-            // Read the API response
+         
             StringBuilder content = new StringBuilder();
             try (BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {
                 String inputLine;
@@ -51,12 +51,12 @@ public class Search extends HttpServlet {
                 }
             }
             
-            // Parse JSON response
+     
             JSONObject jsonResponse = new JSONObject(content.toString());
             JSONArray items = jsonResponse.getJSONArray("items");
 
                 
-            // Generate HTML with search results
+            
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Search Results</title>");
@@ -70,7 +70,7 @@ public class Search extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             
-            // Navbar Section
+            
             out.println("<div class=\"navbar\">");
             out.println("  <div class=\"logo-container\">");
             out.println("    <img src=\"logo.jpg\" alt=\"Logo\">");
@@ -82,7 +82,7 @@ public class Search extends HttpServlet {
             out.println("  </div>");
             out.println("</div>");
             
-            // Search Results Section
+           
             out.println("<h2>Search Results for: " + query + "</h2>");
             for (int i = 0; i < items.length(); i++) {
                 JSONObject item = items.getJSONObject(i);
@@ -101,7 +101,7 @@ public class Search extends HttpServlet {
             out.println("</html>");
 
         } catch (Exception e) {
-            // Error handling
+            
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             out.println("<html><body><h3>An error occurred while fetching results. Please try again later. Net probleam</h3></body></html>");
             e.printStackTrace(out);
