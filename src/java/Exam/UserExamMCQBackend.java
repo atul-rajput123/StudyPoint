@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Exam;
 
 import java.io.IOException;
@@ -15,10 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
 import java.util.*;
 
-/**
- *
- * @author ASUS
- */
+
 @WebServlet(name = "UserExamMCQBackend", urlPatterns = {"/UserExamMCQBackend"})
 public class UserExamMCQBackend extends HttpServlet 
 {
@@ -42,15 +35,12 @@ public class UserExamMCQBackend extends HttpServlet
 			 list.add(rs.getString(5));
 			 list.add(rs.getString(6));
 			}
-			/*out.println(list);
-			request.setAttribute("ram",list);
-			RequestDispatcher dispatcher=request.getRequestDispatcher("UserExamMCQ.jsp");
-			dispatcher.forward(request,response);*/
+
 			}
 		catch (Exception e)
 		{
 			out.println(e);
-			// TODO: handle exception
+			
 		}
 
 
