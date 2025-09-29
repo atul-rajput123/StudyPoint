@@ -12,15 +12,12 @@ import javax.servlet.http.Part;
 import java.sql.*;
 import javax.servlet.annotation.MultipartConfig;
 
-/**
- *
- * @author ASUS
- */
+
 @WebServlet(name = "FileDataInsert", urlPatterns = {"/FileDataInsert"})
 @MultipartConfig(
-    fileSizeThreshold = 1024 * 1024,  // 1MB threshold before writing to disk
-    maxFileSize = 50 * 1024 * 1024,   // 50MB max file size
-    maxRequestSize = 100 * 1024 * 1024 // 100MB max request size
+    fileSizeThreshold = 1024 * 1024,  
+    maxFileSize = 50 * 1024 * 1024,  
+    maxRequestSize = 100 * 1024 * 1024 
 )
 public class FileDataInsert extends HttpServlet {
 
