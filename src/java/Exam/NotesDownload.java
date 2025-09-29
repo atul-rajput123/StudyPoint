@@ -17,10 +17,7 @@ public class NotesDownload extends HttpServlet
     protected  void  doGet(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException
     {
         int id=Integer.parseInt(request.getParameter("id"));
-        //PrintWriter out=response.getWriter();
-        //out.println("<html>");
-        //out.println("<body>");
-        //out.println("<center>");
+        
         
 
         try
@@ -61,9 +58,6 @@ public class NotesDownload extends HttpServlet
         {
               response.getOutputStream().write(("Error: " + e.getMessage()).getBytes());
         }
-        //out.println("<h1>Download SuccessFully</h1>");
-        //out.println("</center>");
-        //out.println("</body>");
-        //out.println("</html>");
+       
     }
 }
