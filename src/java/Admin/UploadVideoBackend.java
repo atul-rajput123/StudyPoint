@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Admin;
 
 import java.io.IOException;
@@ -18,15 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-/**
- *
- * @author ASUS
- */
 @WebServlet(name = "UploadVideoBackend", urlPatterns = {"/UploadVideoBackend"})
 @MultipartConfig(
-    fileSizeThreshold = 1024 * 1024,  // 1MB threshold before writing to disk
-    maxFileSize = 50 * 1024 * 1024,   // 50MB max file size
-    maxRequestSize = 100 * 1024 * 1024 // 100MB max request size
+    fileSizeThreshold = 1024 * 1024,  
+    maxFileSize = 50 * 1024 * 1024,   
+    maxRequestSize = 100 * 1024 * 1024 
 )
 public class UploadVideoBackend extends HttpServlet 
 {
