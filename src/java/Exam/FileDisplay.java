@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Exam;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -29,20 +25,20 @@ public class FileDisplay extends HttpServlet {
                 ResultSet rs = stm.executeQuery();
 
                 if (rs.next()) {
-                    String fileName = rs.getString(2); // Use actual column name
-                    String fileType = rs.getString(3); // Use actual column name
-                    byte[] data = rs.getBytes(4); // Assuming 'data' is the file data column
+                    String fileName = rs.getString(2); 
+                    String fileType = rs.getString(3); 
+                    byte[] data = rs.getBytes(4); 
 
-                    // Set the correct MIME type
+                  
                     response.setContentType(fileType);
 
-                    // Set Content-Disposition to display the file inline with the correct filename
+                    
                     response.setHeader("Content-Disposition", "inline; filename=\"" + fileName + "\"");
 
-                    // Set content length
+                  
                     response.setContentLength(data.length);
 
-                    // Write the file data to the response output stream
+                    
                     try (OutputStream outputStream = response.getOutputStream()) {
                         outputStream.write(data);
                         outputStream.flush();
