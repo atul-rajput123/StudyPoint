@@ -34,7 +34,6 @@ public class VideoDisplay extends HttpServlet {
             response.setHeader("Content-Disposition", "inline; filename=\"" + videoName + "\"");
             response.setContentLength(videoData.length);
 
-            // Write video data directly to response
             try (OutputStream outputStream = response.getOutputStream()) {
                 outputStream.write(videoData);
             }
