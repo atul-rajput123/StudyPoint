@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Help;
 
 import java.io.IOException;
@@ -43,7 +39,7 @@ public class ProfileImageServlet extends HttpServlet {
                     }
                 }
             } else {
-                response.sendRedirect("default-placeholder.png"); // Placeholder for missing image
+                response.sendRedirect("default-placeholder.png"); 
             }
         } catch (Exception e) {
             e.printStackTrace();
